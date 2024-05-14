@@ -14,8 +14,16 @@ The following directives have been used in the Dockerfiles:
 - **CMD**: Provides the command that will be executed when the container starts.
 
 ## Implementation
+- **Build Stage**: Used npm install --production to only install production dependencies, reducing image size.
+- **Multi-Stage Build**: Separates the build environment from the runtime environment, ensuring that only necessary artifacts are carried over to the final image.
+
+# Docker-Compose Networking
+- **Bridge Network**: Default Docker network was used to facilitate communication between containers. This network allows containers connected to it to communicate while isolating them from containers not connected to the bridge.
+- **Ports**: Application ports are mapped from the container to the host to allow external access. For example, 3000:3000 ensures that the application is accessible through the host's port 3000.
+
 
 # Git Workflow
+Followed the instructions provided in README.md to set up the application and run it. Committed every change and pushed the commit to Github.
 
 ## Challenges Encountered
 
