@@ -1,20 +1,33 @@
-#import base image 
-FROM node:14-alpine
+# Stage 1: Build the application
+FROM node:14-alpine as builder
 
-#Setting the working directory in the container 
-WORKDIR /client/app
+# Set the working directory in the build stage
+WORKDIR /app
 
-#Copy the package.json file 
+# Copy package.json and package-lock.json (if available)
 COPY package*.json ./
 
-#Install dependencies 
+# Install dependencies
 RUN npm install
 
-#Copy the rest of the application code from root to working directory
+# Copy the rest of the application code
 COPY . .
+
+# Build the application
 RUN npm run build
-#Expose the port which the container will run 
+
+# Stage 2: Setup the runtime environment
+FROM node:14-alpine
+
+# Set the working directory in the runtime stage
+WORKDIR /app
+
+# Only copy the build artifacts and necessary files from the build stage
+COPY --from=builder /app/build ./build
+COPY --from=builder /app/node_modules ./node_modules
+
+# Expose the port the container will run on
 EXPOSE 3000
 
-#Build the backend 
+# Command to run the application
 CMD [ "npm", "start" ]
