@@ -21,3 +21,8 @@ The following directives have been used in the Dockerfiles:
 
 Encountered a challenge when trying to run the application after cloning it from Github. The issue was the node version on my machine. After reinstalling and running npm `npm audit fix --force`, it worked okay
 
+# Screenshots
+Below are screenshot of the images pushed to Docker hub.
+
+![Client Image Screenshot](<client-image.png>)
+
