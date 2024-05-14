@@ -13,3 +13,11 @@ The following directives have been used in the Dockerfiles:
 - **EXPOSE**: Informs Docker that the container listens on the specified network ports at runtime.
 - **CMD**: Provides the command that will be executed when the container starts.
 
+## Implementation
+
+# Git Workflow
+
+## Challenges Encountered
+
+Encountered a challenge when trying to run the application after cloning it from Github. The issue was the node version on my machine. After reinstalling and running npm `npm audit fix --force`, it worked okay
+
