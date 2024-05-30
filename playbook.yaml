@@ -1,6 +1,6 @@
 ---
 - name: Set up Vagrant VM with Docker and Web Application
-  hosts: vagrant
+  hosts: all
   become: yes
 
   vars_files:
@@ -9,7 +9,8 @@
   roles:
     - common-tasks
     - frontend-setup
-    - backend-set
+    - backend-setup
+
   tasks:
     - name: Clone the application repository
       git:
