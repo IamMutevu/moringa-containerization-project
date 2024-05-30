@@ -1,2 +1,2 @@
-[deployment-servers]
-devops.local ansible_connection=local
+[vagrant]
+default ansible_host=127.0.0.1 ansible_port=2222
