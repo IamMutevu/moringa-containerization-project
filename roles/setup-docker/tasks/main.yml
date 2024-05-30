@@ -18,5 +18,3 @@
         name: vagrant
         groups: docker
         append: yes
-
-      tags: setup_docker
