@@ -11,6 +11,16 @@
     state: present
     update_cache: yes
 
+- name: Install pip
+  apt:
+    name: python3-pip
+    state: present
+    update_cache: yes
+
+- name: Install Docker Python module
+  pip:
+    name: docker
+
 - name: Install Docker Compose
   apt:
     name: docker-compose
