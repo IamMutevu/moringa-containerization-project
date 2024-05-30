@@ -1,0 +1,2 @@
+[deployment-servers]
+devops.local ansible_connection=local
