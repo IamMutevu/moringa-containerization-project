@@ -1,23 +1,16 @@
-# Requirements
-Make sure that you have the following installed:
-- [node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) 
-- npm 
-- [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/) and start the mongodb service with `sudo service mongod start`
+# Web Application Setup
 
-## Navigate to the Client Folder 
- `cd client`
+## Prerequisites
 
-## Run the folllowing command to install the dependencies 
- `npm install`
+- Vagrant
+- VirtualBox
+- Ansible
 
-## Run the folllowing to start the app
- `npm start`
+## Setup
 
-## Open a new terminal and run the same commands in the backend folder
- `cd ../backend`
+1. Clone this repository.
+2. Navigate to the repository directory.
+3. Run `vagrant up` to provision the VM and set up the environment.
+4. Access the application in your browser at `http://localhost:3000`.
 
- `npm install`
-
- `npm start`
-
- ### Go ahead a nd add a product (note that the price field only takes a numeric input)
+The playbook will set up Docker, clone the application repository, and start the necessary Docker containers for the frontend, backend, and database.

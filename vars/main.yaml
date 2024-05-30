@@ -1,0 +1,6 @@
+docker_version: "latest"
+app_repo: "https://github.com/IamMutevu/moringa-containerization-project"
+app_dir: "/home/vagrant/app"
+frontend_image: "mutevu/client:v1.0"
+backend_image: "mutevu/backend:v1.0.0"
+# database_image: "database-image"
