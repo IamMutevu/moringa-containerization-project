@@ -9,7 +9,7 @@ Since the application needs to be accessible externally, **LoadBalancer** type w
 
 ### Backend manifest
 
-Since the application needs to be accessible internally, **ClusterIP** type was used in the service.
+Since the application needs to be accessible internally, **ClusterIP** type was used in the service. Therefore, backend service remains internal and can only be accessed by other services within the cluster.
 
 #### StatefulSet
 The backend manifes file (backend-deployment.yml) defines as **StatefulSet** object. StatefulSets are preferred when it comes to managing stateful applications such as backend, which connects to a MongoDB database. 
