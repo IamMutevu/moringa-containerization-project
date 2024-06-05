@@ -5,9 +5,11 @@
 ### Client manifest
 The client manifest file (client-deployment.yml) defines a **Deployment** object that manages the creation and maintenance of 3 Pods running the client application image (`mutevu/client:v1.0`). 
 
-Since the application needs to be accessible externally, **LoadBalancer** type was used.
+Since the application needs to be accessible externally, **LoadBalancer** type was used in the service.
 
 ### Backend manifest
+
+Since the application needs to be accessible internally, **ClusterIP** type was used in the service.
 
 #### StatefulSet
 The backend manifes file (backend-deployment.yml) defines as **StatefulSet** object. StatefulSets are preferred when it comes to managing stateful applications such as backend, which connects to a MongoDB database. 
