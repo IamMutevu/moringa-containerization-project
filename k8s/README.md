@@ -1,5 +1,7 @@
 # Orchestration (IP 4 explanation)
 
+Explanation of the reasoning behind the implementation can be found in the **explanation.md** file [here](https://github.com/IamMutevu/moringa-containerization-project/blob/master/k8s/explanation.md)
+
 ## Prerequisites
 - Ensure you have the Google Cloud SDK (gcloud) installed and configured on your local machine.
 - Ensure the Kubernetes Engine API is enabled in the project you are using to proceed.  
