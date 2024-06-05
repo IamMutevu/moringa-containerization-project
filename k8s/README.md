@@ -7,13 +7,17 @@
 ## Deployment Steps 
 ### Create the cluster
 
-From the cloud shell, run the following command to create a cluster. The command defines the name of the cluster, the zone and the number of nodes to run. 
+From the cloud shell, run the following command to create a cluster. The command defines the name of the cluster, the region and the number of nodes to run. 
 
-`gcloud container clusters create yolo-project --region us-central1 --num-nodes 2`
+```
+gcloud container clusters create yolo-project --region us-central1 --num-nodes 2
+```
 
 ### Authenticate with GKE Clusters
 
-`gcloud container clusters get-credentials yolo-project --region us-central1`
+```
+gcloud container clusters get-credentials yolo-project --region us-central1
+```
 
 ### Create Namespaces
 
